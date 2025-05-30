@@ -13,15 +13,15 @@ VPATH   = .:$(INCDIR):$(UTLSRC):
 # To use gdb, use gcc for Linux, cc (= clang) for FreeBSD
 # CC      = clang
 # CC      = gcc
-# CC	= gcc-9
-CC      = cc
+CC	= gcc-9
+# CC      = cc
 
 # MAKE    = gmake
 MAKE    = make
 LD      = $(CC)
 
-# OFLAGS  = -O0 -g -Wall -Wextra -Werror -pipe
-OFLAGS  = -O -g -Wall -Wextra -Werror -pipe
+OFLAGS  = -O0 -g -Wall -Wextra -Werror -pipe
+# OFLAGS  = -O -g -Wall -pipe
 
 INCLUDE = -I$(INCDIR)
 
@@ -34,8 +34,8 @@ INCLUDE = -I$(INCDIR)
 # MFLAGS are moved to "include/global.h"
 
 # Set initial gold and quest in "act.player.c"
-# DFLAGS= -DBETA_TEST
-DFLAGS=
+DFLAGS= -DBETA_TEST
+# DFLAGS=
 
 CFLAGS  = $(OFLAGS) $(DFLAGS) $(INCLUDE)
 
